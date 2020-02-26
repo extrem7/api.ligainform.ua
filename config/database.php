@@ -94,9 +94,9 @@ return [
         'wordpress' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'ligainform',
-            'username'  => 'root',
-            'password'  => '',
+            'database' => env('WP_DB_DATABASE', 'forge'),
+            'username' => env('WP_DB_USERNAME', 'forge'),
+            'password' => env('WP_DB_PASSWORD', ''),
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => 'lm_',
