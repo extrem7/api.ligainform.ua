@@ -1,3 +1,4 @@
+.idea
 /vendor
 .env
 .env.backup
@@ -7,6 +8,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+/public/vendor
 
 _ide_helper.php
 .phpstorm.meta.php
