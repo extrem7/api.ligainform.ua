@@ -25,7 +25,7 @@ class PostsController extends Controller
         }
 
         $posts = $query->paginate($per_page);
-        //return $posts;
+
         return PostResource::collection($posts);
     }
 }

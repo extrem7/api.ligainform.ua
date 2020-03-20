@@ -12,7 +12,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Taxonomy::category()
-            ->where('term_id', '!=', 1)
+            ->whereNotIn('term_id', [1, 2413])
             ->get();
 
         $categories = $categories->sortBy(function ($category) {

@@ -20,9 +20,11 @@ class PagesController extends Controller
 
     public function politics()
     {
+        $about = Page::slug('politics')->first();
+
         return [
-            'title' => 'Политика конфиденциальности',
-            'content' => 'Ошибка загрузки..'
+            'title' => $about->post_title,
+            'content' => $about->post_content
         ];
     }
 
