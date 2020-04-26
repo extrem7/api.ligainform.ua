@@ -21,7 +21,7 @@ class Post extends JsonResource
         return [
             'id' => $this->ID,
             'title' => $this->title,
-            'date' => $this->post_date->format('Y.m.d h:s'),
+            'date' => $this->post_date->format('Y.m.d H:s'),
             'date_diff' => $this->post_date->diffForHumans(),
             'image' => $this->image,
             'url' => "$siteUrl/$category/$this->post_name"
