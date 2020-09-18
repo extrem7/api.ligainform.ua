@@ -37,7 +37,9 @@ class PostsController extends Controller
         $query = $params['query'];
         $per_page = $params['per_page'] ?? 10;
 
-        $posts = Post::search($query)->paginate($per_page);
+        $posts = Post::search($query)
+            ->newest()
+            ->paginate($per_page);
 
         return PostResource::collection($posts);
     }

@@ -16,7 +16,7 @@ class Post extends JsonResource
     public function toArray($request)
     {
         $siteUrl = Option::get('siteurl');
-        $category = array_key_first($this->terms['category']);
+        $category = array_key_first($this->terms['category'] ?? []);
 
         return [
             'id' => $this->ID,
