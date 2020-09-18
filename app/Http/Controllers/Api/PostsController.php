@@ -38,6 +38,7 @@ class PostsController extends Controller
         $per_page = $params['per_page'] ?? 10;
 
         $posts = Post::search($query)
+            ->published()
             ->newest()
             ->paginate($per_page);
 
